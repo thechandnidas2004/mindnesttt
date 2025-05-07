@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services - MindNest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c61?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      animation: fadeDown 1s ease-out forwards;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      animation: fadeUp 1s ease-out forwards;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #004d40;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #aed581;
+      transform: scale(1.1);
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2.8rem;
+      color: #00796b;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #00796b;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .cta {
+      margin-top: 40px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #00796b;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #004d40;
+    }
+
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #b2dfdb;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff176;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Services</h1>
+    <p>Tailored Support for Every Journey</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="features.html">Features</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="section">
+    <h2>What We Offer</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="C:\Users\DELL\Desktop\major project\pictures\one.jpg" alt="One-on-one Counseling" />
+        <h3>1-on-1 Counseling</h3>
+        <p>Private sessions tailored to your unique mental and emotional needs, guided by a licensed therapist.</p>
+      </div>
+
+      <div class="card">
+        <img src="C:\Users\DELL\Desktop\major project\pictures\group.jpeg" alt="Group Therapy" />
+        <h3>Group Therapy</h3>
+        <p>Supportive group discussions where shared experiences empower healing and mutual growth.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=600&q=80" alt="Online Chat Support" />
+        <h3>Online Chat</h3>
+        <p>Instant, confidential access to a therapist anytime through secure chat — from anywhere.</p>
+      </div>
+
+      <div class="card">
+        <img src="C:\Users\DELL\Desktop\major project\pictures\family.jpg" alt="Family Counseling" />
+        <h3>Family Therapy</h3>
+        <p>Strengthen relationships and resolve conflicts through guided family conversations and support.</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a href="contact.html">Book a Session</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MindNest. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+  </footer>
+</body>
+</html>

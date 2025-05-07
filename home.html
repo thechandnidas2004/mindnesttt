@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindNest - Mental Health & Counseling</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1554774853-b414d2a2a2c2?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    header h1, header p, header img {
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      animation: fadeDown 1s ease-out forwards;
+    }
+    header img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      animation: zoomIn 1.5s ease;
+    }
+    header p {
+      font-size: 1.5rem;
+      animation: fadeUp 1.2s ease-out forwards;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #00796b;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #aed581;
+    }
+    .section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #00796b;
+    }
+    .section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    .section a {
+      display: inline-block;
+      margin-top: 20px;
+      font-weight: 600;
+      color: #00796b;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+    .section a:hover {
+      color: #004d40;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card h3 {
+      color: #00796b;
+      margin-bottom: 15px;
+    }
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+    footer a {
+      color: #b2dfdb;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff176;
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/4333/4333609.png" alt="MindNest Logo" />
+    <h1>MindNest</h1>
+    <p>Your Safe Space for Healing and Growth</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We are a team of licensed professionals dedicated to providing accessible, compassionate, and personalized mental health care. Your journey to healing starts here.</p>
+    <a href="about.html">Learn more about us &rarr;</a>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>1-on-1 Counseling</h3>
+        <p>Confidential sessions with certified mental health professionals tailored to your needs.</p>
+      </div>
+      <div class="card">
+        <h3>Group Therapy</h3>
+        <p>Connect with others and share experiences in a safe and supportive environment.</p>
+      </div>
+      <div class="card">
+        <h3>Online Chat</h3>
+        <p>Instantly connect with a mental health counselor from anywhere, anytime.</p>
+      </div>
+    </div>
+    <a href="services.html">Explore all services &rarr;</a>
+  </section>
+
+  <section id="features" class="section">
+    <h2>Why Choose MindNest?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Holistic Approach</h3>
+        <p>We consider your emotional, physical, and spiritual well-being as part of healing.</p>
+      </div>
+      <div class="card">
+        <h3>Certified Experts</h3>
+        <p>Our counselors are experienced professionals committed to your mental wellness.</p>
+      </div>
+      <div class="card">
+        <h3>Flexible Booking</h3>
+        <p>Choose a time that suits you and connect through video, phone, or text.</p>
+      </div>
+    </div>
+    <a href="features.html">Read more about our features &rarr;</a>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Have questions or need support? Reach out to us anytime at <a href="mailto:support@mindnest.com">support@mindnest.com</a>.</p>
+    <a href="contact.html">More contact options &rarr;</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MindNest. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+  </footer>
+</body>
+</html>

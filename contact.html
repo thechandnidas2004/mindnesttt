@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Session - MindNest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #fffde7);
+      color: #333;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      animation: fadeIn 1.2s ease-in;
+    }
+    header img {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: #00796b;
+    }
+    .pricing {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 30px 0;
+    }
+    .price-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .price-card:hover {
+      transform: translateY(-10px);
+    }
+    .price-card img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+    .price-card h3 {
+      color: #00796b;
+      margin-bottom: 10px;
+    }
+    .price-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+    form {
+      background: #ffffff;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      animation: slideUp 1.2s ease-out;
+    }
+    form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00796b;
+    }
+    form label {
+      display: block;
+      margin: 15px 0 5px;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    form textarea {
+      resize: vertical;
+    }
+    form button {
+      display: block;
+      margin: 20px auto 0;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #004d40;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes slideUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/4333/4333609.png" alt="MindNest Logo" />
+    <h1>Book a Session</h1>
+  </header>
+
+  <section class="pricing">
+    <div class="price-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Individual Icon" />
+      <h3>Individual Therapy</h3>
+      <p>One-on-one private session<br><strong>$50/session</strong></p>
+    </div>
+    <div class="price-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" alt="Group Icon" />
+      <h3>Group Therapy</h3>
+      <p>Connect with others in a supportive group<br><strong>$30/session</strong></p>
+    </div>
+    <div class="price-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2589/2589175.png" alt="Couples Icon" />
+      <h3>Couples Therapy</h3>
+      <p>Rebuild trust and understanding together<br><strong>$60/session</strong></p>
+    </div>
+  </section>
+
+  <form id="bookingForm">
+    <h2>Schedule Your Session</h2>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" required />
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" required />
+
+    <label for="session">Select Session Type</label>
+    <select id="session" required>
+      <option value="">--Choose--</option>
+      <option value="individual">Individual Therapy - $50</option>
+      <option value="group">Group Therapy - $30</option>
+      <option value="couples">Couples Therapy - $60</option>
+    </select>
+
+    <label for="date">Preferred Date</label>
+    <input type="date" id="date" required />
+
+    <label for="time">Preferred Time</label>
+    <input type="time" id="time" required />
+
+    <label for="notes">Any Notes (Optional)</label>
+    <textarea id="notes" placeholder="Share anything you'd like us to know..."></textarea>
+
+    <button type="submit">Confirm Booking</button>
+  </form>
+
+  <footer>
+    &copy; 2025 MindNest. All rights reserved.
+  </footer>
+
+  <!-- JavaScript for confirmation popup -->
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent actual form submission
+      alert('Your session has been successfully booked! We’ll contact you soon.');
+      this.reset(); // optional: reset the form
+    });
+  </script>
+</body>
+</html>
